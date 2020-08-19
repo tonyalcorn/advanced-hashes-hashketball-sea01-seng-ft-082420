@@ -129,7 +129,7 @@ def game_hash
 end
 
 
-def player_stats(:player)
+def player_stat(player_name)
   game stats 
 end
 
