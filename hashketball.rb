@@ -137,7 +137,15 @@ def num_points_scored(player_name) #WORKS
 
 end
 
-	
+def shoe_size(player_name)
+
+  game_hash.values.each do |team_info|  
+    team_info[:players].each do |player|
+      return player[:shoe] if player.has_value?(player_name)
+    end
+  end
+
+end	
 
 def team_colors(team_name) #WORKS
 	team_colors = nil
