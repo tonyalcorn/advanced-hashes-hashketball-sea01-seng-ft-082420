@@ -144,7 +144,6 @@ def shoe_size(player_name) #WORKS
       return player[:shoe] if player.has_value?(player_name)
     end
   end
-
 end	
 
 def team_colors(team_name) #WORKS
@@ -153,7 +152,6 @@ def team_colors(team_name) #WORKS
 		if location_data[:team_name] == team_name
 			team_colors = location_data[:colors]
 		end
-		
 	end
 	team_colors
 end
