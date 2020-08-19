@@ -200,7 +200,6 @@ def all_stats_for_player(player_name, game)
   end
 end
 
-p all_stats_for_player("Bill Nye", game)
 
 
 # Write code here
