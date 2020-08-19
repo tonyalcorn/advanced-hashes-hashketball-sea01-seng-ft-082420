@@ -127,7 +127,7 @@ def game_hash
     }
   }
 end
-
+binding.pry
 def num_points_scored(player_name) #WORKS
 
   game_hash.values.each do |team|  
@@ -135,7 +135,7 @@ def num_points_scored(player_name) #WORKS
       return player[:points] if player.has_value?(player_name)
     end
   end
-
+binding.pry
 end
 
 def shoe_size(player_name) #WORKS
@@ -154,6 +154,7 @@ def team_colors(team_name) #WORKS
 		if location_data[:team_name] == team_name
 			team_colors = location_data[:colors]
 		end
+		binding.pry
 	end
 	team_colors
 end
