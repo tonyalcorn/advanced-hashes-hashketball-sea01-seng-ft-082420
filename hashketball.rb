@@ -165,17 +165,6 @@ def team_names #WORKS
 	team_names
 end
 
-def player_numbers(team_name) 
-	jersey_nums = []
-	game_hash.each do |location, loc_data|
-	  if loc_data[:team_name] == team_name
-	    loc_data[:players].each do |player, stats|
-	      jersey_nums << stats[:number]
-			end
-		end
-	end
-	jersey_nums
-end
 
 
 def big_shoe_rebounds #WORKS
