@@ -154,7 +154,7 @@ def team_colors(team_name) #WORKS
 		if location_data[:team_name] == team_name
 			team_colors = location_data[:colors]
 		end
-		binding.pry
+		
 	end
 	team_colors
 end
