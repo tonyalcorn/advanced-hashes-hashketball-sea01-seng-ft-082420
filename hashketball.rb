@@ -140,7 +140,5 @@ def player_stat(name)
   end
 end
 
-  
-end
 
 # Write code here
