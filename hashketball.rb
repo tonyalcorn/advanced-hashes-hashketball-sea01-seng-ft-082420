@@ -129,19 +129,6 @@ def game_hash
 end
 
 
-def player_stats(name)
-  game_hash.each do |key, value|
-    #binding.pry
-    value[:players].each do |player_name|
-      #binding.pry
-      if name == player_name[:player_name]
-        return player_name
-        #binding.pry
-      end
-    end
-  end
-end
-
 def num_points_scored(player_name) #WORKS
   game_hash.values.each do |team|  
     team[:players].each do |player|
@@ -200,6 +187,19 @@ def player_numbers(team) #WORKS
   game_hash.values.each do |team_info|
     if team_info.has_value?(team)
       return team_info[:players].map { |player| player[:number]}
+    end
+  end
+end
+
+def player_stats(name)
+  game_hash.each do |key, value|
+    #binding.pry
+    value[:players].each do |player_name|
+      #binding.pry
+      if name == player_name[:player_name]
+        return player_name
+        #binding.pry
+      end
     end
   end
 end
