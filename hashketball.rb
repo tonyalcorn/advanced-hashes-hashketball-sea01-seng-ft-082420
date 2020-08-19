@@ -1,4 +1,5 @@
 require './hashketball.rb'
+require 'pry'
 # Write your code below game_hash
 def game_hash
   {
