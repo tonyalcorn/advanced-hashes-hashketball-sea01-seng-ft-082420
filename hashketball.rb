@@ -181,7 +181,6 @@ end
 
 
 def big_shoe_rebounds #WORKS
-
   biggest_shoe = 0
   player_rebounds = 0
   game_hash.values.each do |team_info|
@@ -197,7 +196,6 @@ end
 
 
 def player_numbers(team) #WORKS
-
   game_hash.values.each do |team_info|
     if team_info.has_value?(team)
       return team_info[:players].map { |player| player[:number]}
@@ -205,5 +203,16 @@ def player_numbers(team) #WORKS
   end
 end
 
+def player_stats(player_name)
 
+  game_hash.values.each do |team_info|
+    team_info[:players].each do |player|
+      if player.has_value?(player_name)
+         player.delete(:player_name) 
+         return player
+      end
+    end
+  end
+
+end
 # Write code here
