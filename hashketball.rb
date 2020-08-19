@@ -127,7 +127,7 @@ def game_hash
     }
   }
 end
-binding.pry
+
 def num_points_scored(player_name) #WORKS
 
   game_hash.values.each do |team|  
