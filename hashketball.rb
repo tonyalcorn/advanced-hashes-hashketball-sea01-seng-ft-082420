@@ -190,17 +190,17 @@ def player_numbers(team) #WORKS
   end
 end
 
-def player_stats(player_name)
-player_stats = nil
-	game_hash.each do |location, loc_data|
-		loc_data[:players].each do |player, stats|
-			if stats[:player_name] == player_name
-	           player_stats = stats
-	           player_stats.delete(:player_name)
-			end
-		end
-	end
-	player_stats
+def all_stats_for_player(player_name, game)
+  game.each do |team, team_hash|
+    team_hash[:players].each do |player, player_hash|
+      if player_hash[:name] == player_name
+        return player_hash[:stats]
+      end
+    end
+  end
 end
+
+p all_stats_for_player("Bill Nye", game)
+
 
 # Write code here
