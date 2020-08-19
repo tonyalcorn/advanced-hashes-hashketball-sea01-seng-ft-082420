@@ -190,6 +190,16 @@ def player_numbers(team) #WORKS
   end
 end
 
-
+def player_stats(player_name)
+	game_hash.each do |location, team_data|
+		team_data[:players].each do |a| 
+			if a[:player_name] == player_name
+				my_hash = a
+				my_hash.shift
+				return my_hash
+			end
+		end
+	end
+end
 
 # Write code here
