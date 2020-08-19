@@ -130,7 +130,8 @@ end
 
 
 def player_stat(player_name)
-  game stats 
+  game stats = nil 
+  
 end
 
 # Write code here
