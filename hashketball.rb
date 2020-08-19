@@ -129,8 +129,8 @@ def game_hash
 end
 
 
-def player_stats
-
+def player_stats(:player)
+  game stats 
 end
 
 # Write code here
