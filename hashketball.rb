@@ -191,14 +191,16 @@ def player_numbers(team) #WORKS
 end
 
 def player_stats(player_name)
-  game_hash.values.each do |team_info|
-    team_info[:players].each do |player|
-      if player.has_value?(player_name)
-         player.delete(:player_name) 
-         return player
-      end
-    end
-  end
+player_stats = nil
+	game_hash.each do |location, loc_data|
+		loc_data[:players].each do |player, stats|
+			if stats[:player_name] == player_name
+	           player_stats = stats
+	           player_stats.delete(:player_name)
+			end
+		end
+	end
+	player_stats
 end
 
 # Write code here
