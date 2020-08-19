@@ -207,4 +207,13 @@ def big_shoe_rebounds #WORKS
   return player_rebounds
 end
 
+
+def player_numbers(team)
+
+  game_hash.values.each do |team_info|
+    if team_info.has_value?(team)
+      return team_info[:players].map { |player| player[:number]}
+    end
+  end
+end
 # Write code here
