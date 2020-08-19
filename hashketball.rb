@@ -190,16 +190,15 @@ def player_numbers(team) #WORKS
   end
 end
 
-def player_stats(player_name)
-	game_hash.each do |location, team_data|
-		team_data[:players].each do |a| 
-			if a[:player_name] == player_name
-				my_hash = a
-				my_hash.shift
-				return my_hash
-			end
-		end
-	end
+def player_stats(player_name, hashketball)
+  player_name.capitalize!
+  if hashketball[:home][:players].include?(player_name)
+    hashketball[:home][:players][player_name][:stats]
+  elsif hashketball[:away][:players].include?(player_name)
+    hashketball[:away][:players][player_name][:stats]
+  else
+    "No player found."
+  end
 end
 
 # Write code here
