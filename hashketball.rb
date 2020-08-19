@@ -192,6 +192,8 @@ def player_numbers(team) #WORKS
   end
 end
 
+def player_stats
 
+end
 
 # Write code here
