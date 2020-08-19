@@ -136,7 +136,6 @@ def player_stat(name)
         return player_name
       end
     end
-    hash_of_players_stats
   end
 end
 
