@@ -129,8 +129,17 @@ def game_hash
 end
 
 
-def player_stat(player_name)
-  game stats = nil 
+def player_stat(name)
+  game_hash.each do |key, value|
+    value[:players].each do |player_name|
+      if name == player_name[:player_name]
+        return player_name
+      end
+    end
+    hash_of_players_stats
+  end
+end
+
   
 end
 
